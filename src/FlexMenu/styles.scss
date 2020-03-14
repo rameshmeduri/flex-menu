@@ -1,0 +1,47 @@
+.flex_menu_container {
+  display: flex;
+  position: relative;
+
+  nav {
+    display: flex;
+    flex-basis: 100%;
+    overflow: hidden;
+
+    /* menu items */
+    >* {
+      flex-grow: 1;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      white-space: nowrap;
+      padding: 0 1rem;
+			text-decoration: none;
+    }
+
+    /* dropdown */
+    &:nth-of-type(2) {
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      visibility: hidden;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .more_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: unset;
+    border: none;
+    color: unset;
+    cursor: pointer;
+    display: inline-block;
+    font: unset;
+    margin: 0;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
